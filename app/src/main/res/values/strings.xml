@@ -3,8 +3,8 @@
     <string-array
         name="Languages">
         <item>English</item>
-        <item>Chinese  中文</item>
-        <item>Japanese 日本語</item>
+        <item>Chinese</item>
+        <item>Japanese</item>
 
     </string-array>
 </resources>

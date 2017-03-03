@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
 public class MainActivity extends AppCompatActivity {
     private Button button;
     private EditText search;
@@ -35,7 +37,9 @@ public class MainActivity extends AppCompatActivity {
         public void onClick(View view){
             String t = "Searching "+ search.getText().toString();
             Toast.makeText(con,t, Toast.LENGTH_LONG).show();
-            Query q = new Query(search.getText().toString(), languages.getSelectedItem().toString());
+            Query q = new Query(con, search.getText().toString(), languages.getSelectedItem().toString());
+            JSONObject res = q.start();
+
         }
     }
 }
